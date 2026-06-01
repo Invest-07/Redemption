@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
 body {
   background: #0a0a0a;
   font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
@@ -18,7 +23,7 @@ body {
 }
 
 .navbar {
-  width: 100%;
+  width: calc(100% - 48px);
   max-width: 960px;
   background: #ffffff;
   border-radius: 14px;
@@ -53,6 +58,14 @@ body {
   height: 18px;
   background: #444;
 }
+.dice-container {
+  flex: 1;
+  width: 100%;
+  max-width: 960px;
+  height: 600px;
+  margin-top: 40px;
+}
+
 .nav-btn {
   background: transparent;
   border: none;

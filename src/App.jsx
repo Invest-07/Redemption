@@ -1,12 +1,11 @@
 import './App.css'
+import Dice from './Dice'
 
 function Navbar() {
   return (
     <nav className="navbar">
       <span className="logo">Owl Rock</span>
       <div className="nav-right">
-        <a href="#">Portfolio</a>
-        <a href="#">About</a>
         <div className="divider"></div>
         <button className="nav-btn">로그인</button>
       </div>
@@ -15,9 +14,16 @@ function Navbar() {
 }
 
 function App() {
+  const handleFaceClick = (label) => {
+    alert(`${label} 페이지로 이동!`)
+  }
+
   return (
     <div className="page">
       <Navbar />
+      <div className="dice-container">
+        <Dice onFaceClick={handleFaceClick} />
+      </div>
     </div>
   )
 }
